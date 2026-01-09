@@ -1,0 +1,65 @@
+# ========== Unity 核心忽略规则 ==========
+# Unity 生成的文件夹
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+
+# Visual Studio/MonoDevelop 生成的文件
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# Unity3D 生成的 meta 文件
+**/*.pidb.meta
+**/*.pdb.meta
+
+# Unity3D 临时文件
+sysinfo.txt
+
+# 构建结果
+*.apk
+*.unitypackage
+
+# 崩溃报告
+crashlytics-build.properties
+
+# ========== VS Code 相关 ==========
+.vscode/
+!.vscode/settings.json  # 可选：可以保留设置文件
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# ========== macOS ==========
+.DS_Store
+._*
+
+# ========== Windows ==========
+Thumbs.db
+Desktop.ini
+
+# ========== 特定文件夹忽略 ==========
+# 如果只想跟踪 Assets/Scripts 而忽略其他 Assets 内容
+# 先注释掉这行，后续再按需配置
+# /Assets/*
+# !/Assets/Scripts/
+
+# ========== Packages 文件夹 ==========
+# 只跟踪 manifest.json，忽略其他
+/Packages/*
+!/Packages/manifest.json
