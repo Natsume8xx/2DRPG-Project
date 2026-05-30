@@ -9,8 +9,6 @@ public class SnailSkillState : BaseState
         currentEnemy = enemy;
         currentEnemy.currentState = currentEnemy.skillState;
         currentEnemy.currentSpeed = 0;
-        //currentEnemy.isSkill = true;
-        //if(!currentEnemy.anim.GetCurrentAnimatorStateInfo(0).IsName("snaiHide"))
             currentEnemy.anim.SetTrigger("skill");
         currentEnemy.anim.SetBool("hide",true);
         currentEnemy.lostTimeCount = currentEnemy.lostTime;
@@ -30,13 +28,10 @@ public class SnailSkillState : BaseState
     public override void PhysicsUpdated()
     {
         currentEnemy.GetComponent<Character>().invulnerableCount = currentEnemy.lostTimeCount;
-        // if(currentEnemy.isSkill)
-        //     return;
     }
 
     public override void OnExit()
     {
-        //currentEnemy.isSkill = false;
         currentEnemy.anim.SetBool("hide",false);
     }
 }

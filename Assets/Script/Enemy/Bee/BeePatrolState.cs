@@ -11,7 +11,6 @@ public class BeePatrolState : BaseState
         currentEnemy = enemy;
         currentEnemy.currentSpeed = currentEnemy.normalSpeed;
         targetPos = currentEnemy.GetNewPoint();
-        //TODO: 动画的参数修改
     }
 
     public override void LogicUpdated()

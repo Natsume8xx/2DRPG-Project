@@ -16,7 +16,6 @@ public class SnailPatrolState : BaseState
         if (currentEnemy.FoundPlayer())
         {
             currentEnemy.SwitchState(NPCState.Skill);
-            //return;
         }
         // 检测撞墙
         if(!currentEnemy.physicsCheck.isGround || (currentEnemy.physicsCheck.touchLeftWall && currentEnemy.faceDir.x<0) || (currentEnemy.physicsCheck.touchRightWall && currentEnemy.faceDir.x>0))

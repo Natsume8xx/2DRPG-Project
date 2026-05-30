@@ -10,7 +10,6 @@ public class BoarChaseState : BaseState
         currentEnemy = enemy;
         currentEnemy.currentSpeed = currentEnemy.chaseSpeed;
         currentEnemy.anim.SetBool("run",true);
-        //currentEnemy.lostTimeCount = currentEnemy.lostTime;
     }
 
     public override void LogicUpdated()
@@ -19,7 +18,6 @@ public class BoarChaseState : BaseState
         if (currentEnemy.lostTimeCount <= 0)
         {
             currentEnemy.SwitchState(NPCState.Patrol);
-            //return;
         }
         //碰墙不等待直接冲锋
         if(!currentEnemy.physicsCheck.isGround || (currentEnemy.physicsCheck.touchLeftWall && currentEnemy.faceDir.x<0) || (currentEnemy.physicsCheck.touchRightWall && currentEnemy.faceDir.x>0))
@@ -43,8 +41,6 @@ public class BoarChaseState : BaseState
 
     public override void OnExit()
     {
-        //重置计时器
-        //currentEnemy.lostTimeCount = currentEnemy.lostTime;
         Debug.Log("Chase Exit");
         currentEnemy.anim.SetBool("run",false);
     }

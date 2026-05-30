@@ -33,7 +33,6 @@ public class Bee : Enemy
 
     public override Vector3 GetNewPoint()
     {
-        //TODO:这里其实可以加一个检测，检测如果新的点生成在地面的话，那么就重新生成一个点
         var X = Random.Range(-patrolRaduis,patrolRaduis);
         var Y = Random.Range(-patrolRaduis,patrolRaduis);
         Vector3 newPoint = spwanPoint + new Vector3(X,Y);
@@ -44,8 +43,6 @@ public class Bee : Enemy
             Y = Random.Range(-patrolRaduis,patrolRaduis);
             newPoint = spwanPoint + new Vector3(X,Y);
         }
-        //Gizmos.color = Color.red;
-        //Gizmos.DrawWireSphere(newPoint,checkGroundRadius);
         return newPoint;
     }
 

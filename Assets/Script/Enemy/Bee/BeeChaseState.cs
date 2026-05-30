@@ -50,7 +50,6 @@ public class BeeChaseState : BaseState
             }
             else
             {
-                //isAttack = false;
                 attackRateCount -= Time.deltaTime;
             }
         }

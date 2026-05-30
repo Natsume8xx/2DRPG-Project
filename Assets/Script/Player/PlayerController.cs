@@ -167,7 +167,6 @@ public class PlayerController : MonoBehaviour
     private void Jump(InputAction.CallbackContext obj)
     {
         if(physicsCheck.isGround ){
-            //isSlide = false;
             //播放跳跃音效
             this.GetComponent<AudioDefination>().PlayAudio();
             if (isSlide)
